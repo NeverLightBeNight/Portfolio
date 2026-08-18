@@ -3,10 +3,10 @@ import type { ILinksNavState } from "../ts/typNavLinks";
 
 const useLinksNavStore = create<ILinksNavState>(() => ({
   links: [
-    { title: "Home", href: "#" },
-    { title: "About me", href: "#about" },
-    { title: "Skills", href: "#skills" },
-    { title: "Contact me", href: "#contact" },
+    { title: "Home", to: "/" },
+    { title: "About me", to: "/about" },
+    { title: "Skills", to: "/skills" },
+    { title: "Contact me", to: "/contact" },
   ],
 }));
 

@@ -1,75 +1,136 @@
-# React + TypeScript + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Персональный сайт-портфолио frontend-разработчика.
 
-Currently, two official plugins are available:
+Сайт создан для презентации моих навыков, проектов, опыта и контактной информации. Он помогает быстро ознакомиться с моим стеком и связаться со мной по поводу сотрудничества.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## О проекте
 
-## React Compiler
+Это современный адаптивный сайт-портфолио в тёмно-синей цветовой гамме.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Основные цели проекта:
 
-## Expanding the ESLint configuration
+- показать мои навыки в frontend-разработке;
+- продемонстрировать выполненные проекты;
+- рассказать о моём опыте и подходе к работе;
+- предоставить удобные контакты для связи;
+- создать аккуратный и современный пользовательский интерфейс.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Возможности
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Адаптивная вёрстка для компьютеров, планшетов и телефонов.
+- Тёмная цветовая палитра в синих оттенках.
+- Плавные hover-анимации.
+- Карточки навыков с эффектом свечения.
+- Секции с информацией обо мне и моих навыках.
+- Блок с проектами.
+- Контакты без формы обратной связи.
+- Переходы по ссылкам на GitHub, Telegram и Email.
+- Компонентная структура React-приложения.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Секции сайта
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Главный экран
 
+Краткое представление, моя специализация и основная информация обо мне.
+
+### Обо мне
+
+Описание моего опыта, интересов и направления развития во frontend-разработке.
+
+### Навыки
+
+Список технологий и профессиональных навыков:
+
+- React;
+- JavaScript;
+- TypeScript;
+- HTML;
+- CSS;
+- Tailwind CSS;
+- работа с API;
+- адаптивная вёрстка;
+- оптимизация производительности;
+- компонентный подход.
+
+### Проекты
+
+Карточки проектов с их описанием, использованными технологиями и ссылками.
+
+### Контакты
+
+Прямые ссылки для связи:
+
+- Email;
+- Telegram;
+- GitHub.
+
+Форма обратной связи на сайте не используется.
+
+## Технологии
+
+- **React** — создание интерфейса и переиспользуемых компонентов.
+- **TypeScript** — типизация данных, props и структур проекта.
+- **Tailwind CSS** — стилизация интерфейса с помощью utility-классов.
+- **Vite** — запуск проекта и быстрая сборка приложения.
+- **JavaScript/JSX** — логика и разметка компонентов.
+- **Git** — контроль версий проекта.
+
+## Стилизация
+
+В дизайне используются:
+
+- тёмно-синие фоновые оттенки;
+- цвета `slate`, `blue`, `sky` и `cyan`;
+- полупрозрачные карточки;
+- эффект glassmorphism;
+- градиентные свечения;
+- плавные анимации при наведении;
+- скруглённые блоки и минималистичная композиция.
+
+Главная задача дизайна — сделать сайт современным, читаемым и удобным для просмотра на любых устройствах.
+
+## Структура проекта
+
+```text
+src/
+├── components/
+│   ├── Header/
+│   ├── Hero/
+│   ├── About/
+│   ├── Skills/
+│   ├── Projects/
+│   └── Contact/
+├── data/
+│   └── index.ts
+├── assets/
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Сборка проекта
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Для создания production-версии выполните:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run build
 ```
+
+Для локальной проверки production-сборки:
+
+```bash
+npm run preview
+```
+
+## Автор
+
+**Максим**
+
+Frontend-разработчик, интересующийся созданием современных интерфейсов, React-разработкой и UI/UX-дизайном.
+
+## Контакты
+
+## Лицензия
+
+Проект создан в образовательных и демонстрационных целях.

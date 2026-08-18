@@ -1,5 +1,4 @@
 export interface IProps {
-  href: string;
+  to: string;
   context: string;
-  index: number;
 }

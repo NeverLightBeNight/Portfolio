@@ -1,11 +1,8 @@
 const LogoTitle = () => {
   return (
-    <a
-      href="#"
-      className="text-xl font-bold tracking-wide text-white transition-colors hover:text-cyan-400"
-    >
-      Leonid<span className="text-cyan-400"></span>
-    </a>
+    <h1 className="text-xl font-bold tracking-wide text-white transition-colors ">
+      Leonid
+    </h1>
   );
 };
 

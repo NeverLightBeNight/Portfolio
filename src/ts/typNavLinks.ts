@@ -1,6 +1,6 @@
 interface ILinks {
   title: string;
-  href: string;
+  to: string;
 }
 
 export interface ILinksNavState {

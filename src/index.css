@@ -26,3 +26,8 @@ body {
 .element {
   animation: fadeInDown 0.8s ease 0s 1 normal forwards;
 }
+
+.active {
+  background-color: cyan;
+  color: #000;
+}
