@@ -4,8 +4,25 @@
   box-sizing: border-box;
 }
 
-
 body {
   max-width: 100vw;
   min-height: 100vh;
+  background: #2c3e50;
+  background: -webkit-linear-gradient(to right, #3498db, #2c3e50);
+  background: linear-gradient(to right, #3498db, #2c3e50);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.element {
+  animation: fadeInDown 0.8s ease 0s 1 normal forwards;
 }
